@@ -33,7 +33,7 @@ In order to upgrade your hero's code you will first need to clone your hero-star
   * [Git Immersion](http://gitimmersion.com/)
   * [Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet-detail/)
 
-####Steps####
+######Steps######
 1. Navigate to your repo and find the 'HTTPS clone URL' button, make sure you are cloning with 'HTTPS' and click the 'Copy to Clipboard' button.
 2. Create a new folder on your file system somewhere and navigate to that folder in the command line.
   * If you are new to the command line, a quick Google search will return some good results for command line introductions on your OS.
@@ -45,3 +45,33 @@ For example, to clone my repo, I would use:
 ```
 git clone https://github.com/forrestbthomas/hero-starter.git
 ```
+4. Now, Git is tracking this repo on your local machine. When you make changes to any file in this repo, Git will know about it. Go ahead and open up your hero.js file.
+  * To learn more about the code in your hero.js file, take a look at our [wiki](www.javascriptbattle.com/wiki). 
+5. Make some changes to the code.
+6. Now, go back to the command line, navigate to the directory containing the hero.js file and check the status of your file with the following command:
+```
+git status
+```
+Your terminal should read:
+```
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+# modified:   hero.js
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+Git is telling us that you have made changes to your file and wants to know what to do. 
+7. Skipping some of the details, you will need to type the following:
+```
+git add hero.js
+```
+This stages your hero.js file for a commit
+8. Then type:
+```
+git commit
+```
+This will bring up a prompt in your terminal for you to write a message. This message will help you later keep track of what you changed when. Go ahead and type something descriptive of the change you just made. When done, close the window by pressing "ESC", ":", "w" and "q".
+9. Now, Git knows about your changes and has a record of the changes you have made. Before moving on to 'pushing,' let's pause and take a look at what is going on in hero.js.
