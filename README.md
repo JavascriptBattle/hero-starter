@@ -75,3 +75,28 @@ git commit
 ```
 This will bring up a prompt in your terminal for you to write a message. This message will help you later keep track of what you changed when. Go ahead and type something descriptive of the change you just made. When done, close the window by pressing "ESC", ":", "w" and "q".
 9. Now, Git knows about your changes and has a record of the changes you have made. Before moving on to 'pushing,' let's pause and take a look at what is going on in hero.js.
+
+####The Hero's Brain####
+Inside of hero.js is some Javascript code. If you have never taken a look at Javascript before, we would recommend going through some online resources to get acclamated.
+  * [Codecademy](http://www.codecademy.com/)
+  * [Khan Acamdey](https://www.khanacademy.org/)
+  * [Coderbyte](http://www.coderbyte.com/)
+  * [Code School](https://www.codeschool.com/)
+  * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+If you take a look at hero.js, you will notice that there are, in fact, four different move functions - three of which are commented out. Each function describes a specific type of hero behavior. 
+
+1. The miner cares about being healthy and mining diamonds.
+2. The aggressor cares about attacking everyone, no matter what.
+3. The health nut cares about staying healthy and maybe mining some diamonds.
+4. The balanced hero tries to care about each aspect of the game equally. The hero.js defaults to this code.
+
+If you want to try something different for tomorrow's game, you can comment out the balanced hero and try one of the other ones. Watch tomorrow's game and see how your hero does. Each day is going to offer a unique battle as each player alters which hero they decide to play with.
+
+Once you get acclamated to the different types of heroes and think you want to give writing your own hero a shot, try altering some of the code. Maybe you want your miner to wait a little longer before going to a health well? What if your health nut was aware of where the nearest enemy was and tried to keep away? How about if the agressor became a real berzerker? The possibilities are endless!!! And that is exactly how we want it. Go crazy and change your hero however you want. Just remember to track your changes with Git by following the process above.
+
+If you are looking for even more of a challenge, go ahead and take a look at the helpers.js file and begin picking apart our helper methods. Is there anyway you could adapt our pathfinding algorithm and use a variant in your hero.js file? What other helper methods should be available to your hero that we did not include? Just remember, if you want to use your own helper methods, you will have to include them in your own hero.js file. Otherwise, our website would not know about your changes and your helper methods would not work.
+
+####Pushing####
+
+Once you have changed your 
