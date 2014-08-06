@@ -1,4 +1,4 @@
-var Game = require('./Game.js');
+
 
 var helpers = {};
 
@@ -179,3 +179,5 @@ helpers.findNearestEnemyWithLowHealth = function(gameObj, healthLevel){
   return fn(gameObj.activeHero(), 'Hero', gameObj.board).direction || false;
 
 };
+
+module.exports = helpers;
