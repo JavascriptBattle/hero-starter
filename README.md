@@ -108,8 +108,7 @@ Once you have changed your hero to be the ultimate Javascript champion, you will
 ```
 git push origin master
 ```
-This command will take your committed changes and push them up to your GitHub repo online.
-3. You will be prompted for your username and password to your GitHub account. Go ahead any type those in.
+3. This command will take your committed changes and push them up to your GitHub repo online. You will be prompted for your username and password to your GitHub account. Go ahead any type those in.
 4. After that, navigate to your GitHub repo in your favorite browser and check out your altered files.
 5. That's it! You have successfully altered your hero.js file and prepared your hero for tomorrow's battle. Now, we will wait and see how your hero does against other noble warriors in tomorrow's battle.
 
