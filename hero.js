@@ -21,7 +21,7 @@
   Such is the power of Javascript!!!
 
 */
-
+/*
 // Miner
 var move = function(gameData, helpers) {
   // Here, we ask if your hero's health is below 50
@@ -33,7 +33,8 @@ var move = function(gameData, helpers) {
     return helpers.findNearestDiamondMine(gameData);
   }
 };
-
+*/
+/*
 // Aggressor
 var move = function(gameData, helpers) {
   // Here, we ask if your hero's health is below 30
@@ -45,7 +46,8 @@ var move = function(gameData, helpers) {
     return helpers.findNearestEnemy(gameData);
   }
 };
-
+*/
+/*
 // Health Nut
 var move = function(gameData, helpers) {
   // Here, we ask if your hero's health is below 75
@@ -57,7 +59,7 @@ var move = function(gameData, helpers) {
     return helpers.findNearestDiamondMine(gameData);
   }
 };
-
+*/
 // Balanced
 var move = function(gameData, helpers) {
   // Here, we ask if your hero's health is below 50
