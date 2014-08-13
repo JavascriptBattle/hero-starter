@@ -15,7 +15,7 @@ If you are anxious to join the fight (and who wouldn't be), then all you need to
   * After signing up, navigate back to this page and at the top right of your screen, click the 'Fork' button.
   * When you click the 'Fork' button, you will be asked where you want to fork this repo. Go ahead and click your username. This will effectively copy this repo into yours.
   * BAM!!! Now, you have a working repo in your account! Nice! 
-  * The only things left to do is navigate to the [Javascript Battle](http://javascriptbattle.com/) website and sign up. Make sure you tell us the name of your repo. 
+  * The only thing left to do is navigate to the [Javascript Battle](http://javascriptbattle.com/) website and sign up. Make sure you tell us the name of your repo. 
     * **Hint** - You can find this info by looking at the url when you are in your repo. For example, the url for my repo is 'github.com/forrestbthomas/hero-starter'. My username is 'forrestbthomas' and my repo name is 'hero-starter'.
   * At this point, you have a working repo, with working hero code and you can watch your hero tilt with the best in tomorrow's battle. Once you are ready, you can begin diving in to the code, to make your hero even stronger and make Javascript Battle even more glorious!
 
@@ -34,7 +34,7 @@ In order to upgrade your hero's code you will first need to clone your hero-star
   * [Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet-detail/)
 
 ######Steps######
-  * Navigate to your repo and find the 'HTTPS clone URL' button on the left-hand side of the page, about half-way down. Make sure you are cloning with 'HTTPS' and click the 'Copy to Clipboard' button.
+  * Navigate to your repo and find the 'HTTPS clone URL' button on the right-hand side of the page, about half-way down. Make sure you are cloning with 'HTTPS' and click the 'Copy to Clipboard' button.
   * Create a new folder on your file system somewhere and navigate to that folder in the command line.
     * If you are new to the command line, a quick Google search will return some good results for command line introductions on your OS.
   * Once there, you will need to clone your repo using the following command:
@@ -96,7 +96,11 @@ If you want to try something different for tomorrow's game, you can comment out 
 
 Once you get acclimated to the different types of heroes and think you want to give writing your own hero a shot, try altering some of the code. Maybe you want your miner to wait a little longer before going to a health well? What if your health nut was aware of where the nearest enemy was and tried to keep away? How about if the aggressor became a real berserker? The possibilities are endless!!! And that is exactly how we want it. Go crazy and change your hero however you want. Just remember to track your changes with Git by following the process above.
 
-If you are looking for even more of a challenge, go ahead and take a look at the helpers.js file and begin picking apart our helper methods. Is there anyway you could adapt our pathfinding algorithm and use a variant in your hero.js file? What other helper methods should be available to your hero that we did not include? Just remember, if you want to use your own helper methods, you will have to include them in your own hero.js file. Otherwise, our website would not know about your changes and your helper methods would not work.
+If you are looking for even more of a challenge, go ahead and take a look at the helpers.js file and begin picking apart our helper methods. Is there anyway you could adapt our pathfinding algorithm and use a variant in your hero.js file? What other helper methods should be available to your hero that we did not include? Go ahead and make any changes you want to the helpers.js file, but make sure the very bottom of the file reads:
+```javascript
+module.exports = helpers;
+```
+This allows our site to pull this code from your repo and use it in tomorrow's game.
 
 ####Pushing####
 
