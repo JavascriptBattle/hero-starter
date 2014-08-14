@@ -26,7 +26,6 @@
   Such is the power of Javascript!!!
 
 */
-
 //TL;DR: If you are new, just uncomment the 'move' function that you think sounds like fun!
 //       (and comment out all the other move functions)
 
@@ -137,7 +136,6 @@ var move = function(gameData, helpers) {
 // var move = function(gameData, helpers) {
 //   return helpers.findNearestHealthWell(gameData);
 // }
-
 
 // Export the move function here
 module.exports = move;
