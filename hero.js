@@ -31,20 +31,20 @@
 //       (and comment out all the other move functions)
 
 
-// The "Northerner"
+// // The "Northerner"
 // var move = function(gameData, helpers) {
 //   var myHero = gameData.activeHero;
 //   return 'North';
 // };
 
-//The "Indecisive"
+// // The "Blind Man"
 // var move = function(gameData, helpers) {
 //   var myHero = gameData.activeHero;
 //   var choices = ['North', 'South', 'East', 'West'];
 //   return choices[Math.floor(Math.random()*4)];
 // };
 
-//The "Unwise Assassin"
+// // The "Unwise Assassin"
 // var move = function(gameData, helpers) {
 //   var myHero = gameData.activeHero;
 //   if (myHero.health < 30) {
@@ -54,7 +54,7 @@
 //   }
 // };
 
-//The "Careful Assassin"
+// // The "Careful Assassin"
 // var move = function(gameData, helpers) {
 //   var myHero = gameData.activeHero;
 //   if (myHero.health < 50) {
@@ -64,7 +64,7 @@
 //   }
 // };
 
-// The "Safe Diamond Miner"
+// // The "Safe Diamond Miner"
 var move = function(gameData, helpers) {
   var myHero = gameData.activeHero;
 
@@ -90,7 +90,7 @@ var move = function(gameData, helpers) {
   }
 };
 
-// //The "Selfish Diamond Miner" (captures teammates' diamond mines)
+// // The "Selfish Diamond Miner" (captures teammates' diamond mines)
 // var move = function(gameData, helpers) {
 //   var myHero = gameData.activeHero;
 
@@ -116,7 +116,7 @@ var move = function(gameData, helpers) {
 //   }
 // };
 
-// //The "Coward"
+// // The "Coward"
 // var move = function(gameData, helpers) {
 //   return helpers.findNearestHealthWell(gameData);
 // }
