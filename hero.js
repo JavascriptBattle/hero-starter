@@ -37,7 +37,7 @@
 //   return 'North';
 // };
 
-// // The "Blind Man"
+// The "Blind Man"
 // var move = function(gameData, helpers) {
 //   var myHero = gameData.activeHero;
 //   var choices = ['North', 'South', 'East', 'West'];
@@ -74,9 +74,9 @@ var move = function(gameData, helpers) {
       return true;
     }
   });
-
   var distanceToHealthWell = healthWellStats.distance;
-  var directionToHealthWell = HealthWell.direction;
+  var directionToHealthWell = healthWellStats.direction;
+  
 
   if (myHero.health < 40) {
     //Heal no matter what if low health
@@ -102,7 +102,7 @@ var move = function(gameData, helpers) {
 //   });
 
 //   var distanceToHealthWell = healthWellStats.distance;
-//   var directionToHealthWell = HealthWell.direction;
+//   var directionToHealthWell = healthWellStats.direction;
 
 //   if (myHero.health < 40) {
 //     //Heal no matter what if low health
