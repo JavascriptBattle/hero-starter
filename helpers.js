@@ -147,7 +147,7 @@ helpers.findNearestNonTeamDiamondMine = function(gameData) {
   var board = gameData.board;
 
   //Get the path info object
-  var pathInfoObject = helpers.findNearestObjectDirectionAndDistance(hero, function(mineTile) {
+  var pathInfoObject = helpers.findNearestObjectDirectionAndDistance(board, hero, function(mineTile) {
     if (mineTile.type === 'DiamondMine') {
       if (mineTile.owner) {
         return mineTile.owner.team !== hero.team;
@@ -211,6 +211,8 @@ helpers.findNearestWeakerEnemy = function(gameData) {
   });
 
   //Return the direction that needs to be taken to achieve the goal
+  //If no weaker enemy exists, will simply return undefined, which will
+  //be interpreted as "Stay" by the game object
   return pathInfoObject.direction;
 };
 
