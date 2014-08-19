@@ -95,7 +95,6 @@ var move = function(gameData, helpers) {
 // };
 
 // // The "Safe Diamond Miner"
->>>>>>> 49dc9fa90f0a9aed484e3c310388234f157b6fad
 var move = function(gameData, helpers) {
   var myHero = gameData.activeHero;
 
