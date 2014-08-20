@@ -108,7 +108,7 @@ var move = function(gameData, helpers) {
   var directionToHealthWell = healthWellStats.direction;
   
 
-  if (myHero.health < 40) {
+  if (myHero.health < 60) {
     //Heal no matter what if low health
     return directionToHealthWell;
   } else if (myHero.health < 100 && distanceToHealthWell === 1) {
