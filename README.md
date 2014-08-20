@@ -85,14 +85,17 @@ Inside of hero.js is some Javascript code. If you have never taken a look at Jav
   * [Code School](https://www.codeschool.com/)
   * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-If you take a look at hero.js, you will notice that there are, in fact, four different move functions - three of which are commented out. Each function describes a specific type of hero behavior. 
+If you take a look at hero.js, you will notice that there are different move functions - most of which are commented out. Each function describes a specific type of hero behavior. 
 
-  * The miner cares about being healthy and mining diamonds.
-  * The aggressor cares about attacking everyone, no matter what.
-  * The health nut cares about staying healthy and maybe mining some diamonds.
-  * The balanced hero tries to care about each aspect of the game equally. The hero.js defaults to this code.
+  * The "Northerner" cares about moving North...all the time.
+  * The "Blind Man" moves randomly around the board.
+  * The "Unwise Assassin" only cares about killing other players, possibly to his own demise.
+  * The "Careful Assassin" goes after other players as well, but cares more about his health than the "Unwise Assassin."
+  * The "Safe Diamond Miner" cares about mining diamonds and making sure he or she is alive at the end of the game to enjoy the wealth.
+  * The "Selfish Diamond Miner" cares about mining diamonds, but will also capture his own team's diamond mines.
+  * The "Coward" will find the nearest health well and stay there.
 
-If you want to try something different for tomorrow's game, you can comment out the balanced hero and try one of the other ones. [Watch](http://javascriptbattle.com/#replay) tomorrow's game and see how your hero does. Each day is going to offer a unique battle as each player alters which hero they decide to play with.
+If you want to try something different for tomorrow's game uncomment one of the heroes and try it out. [Watch](http://javascriptbattle.com/#replay) tomorrow's game and see how your hero does. Each day is going to offer a unique battle as each player alters which hero they decide to play with.
 
 Once you get acclimated to the different types of heroes and think you want to give writing your own hero a shot, try altering some of the code. Maybe you want your miner to wait a little longer before going to a health well? What if your health nut was aware of where the nearest enemy was and tried to keep away? How about if the aggressor became a real berserker? The possibilities are endless!!! And that is exactly how we want it. Go crazy and change your hero however you want. Just remember to track your changes with Git by following the process above.
 
