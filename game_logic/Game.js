@@ -229,16 +229,15 @@ Game.prototype.handleHeroTurn = function(direction) {
       }
     }
   }
-
 };
 
 
 // Resolve diamond mine earnings
 Game.prototype._handleHeroEarnings = function(hero) {
   if (hero.mineCount > 0) {
-    this.diamondMessage = 'Hero #' + hero.id + ' got ' + hero.mineCount + ' diamonds from his mines';
+    this.diamondMessage = hero.name + ' got ' + hero.mineCount + ' diamonds from his mines';
   } else {
-    this.diamondMessage = 'Hero #' + hero.id + ' owns no mines, and got no diamonds';
+    this.diamondMessage = hero.name + ' owns no mines, and got no diamonds';
   }
   this.totalTeamDiamonds[hero.team] += hero.mineCount;
   hero.diamondsEarned += hero.mineCount;
@@ -246,7 +245,7 @@ Game.prototype._handleHeroEarnings = function(hero) {
 
 // Attempt to move hero in the direction indicated
 Game.prototype._handleHeroMove = function(hero, direction) {
-  this.moveMessage = 'Hero #' + hero.id + ' walked ' + direction;
+  this.moveMessage = hero.name + ' walked ' + direction;
 
   // Gets the tile at the location that the hero wants to go to
   var tile = this.board.getTileNearby(hero.distanceFromTop, hero.distanceFromLeft, direction);
@@ -285,7 +284,7 @@ Game.prototype._handleHeroMove = function(hero, direction) {
     // If capturing the mine takes the hero to 0 HP, he dies
     if (hero.dead) {
       this.heroDied(hero);
-      this.moveMessage += ', tried to capture a diamond mine, but died fighting the mine guardians';
+      this.moveMessage += ', tried to capture a diamond mine, but died.';
       return;
 
     // If he survives, he is now the owner of the mine
@@ -328,9 +327,9 @@ Game.prototype._resolveHeroAttacks = function(hero) {
 
         // Update the attack message
         if (this.attackMessage === '') {
-          this.attackMessage === 'Hero #' + hero.id + ' stabbed Hero #' + otherHero.id;
+          this.attackMessage = hero.name + ' stabbed ' + otherHero.name;
         } else {
-          this.attackMessage === 'and Hero #' + otherHero.id;
+          this.attackMessage += ' and ' + otherHero.name;
         }
 
         // Our hero (whose turn it is) will auto-hit any heroes in range,
@@ -344,7 +343,7 @@ Game.prototype._resolveHeroAttacks = function(hero) {
           // Tell our hero he killed someone
           hero.killedHero(otherHero);
 
-          this.killMessage = 'Hero #' + hero.id + ' killed Hero #' + otherHero.id + '!';
+          this.killMessage = hero.name + ' killed ' + otherHero.name + '!';
         }
       }
     }
