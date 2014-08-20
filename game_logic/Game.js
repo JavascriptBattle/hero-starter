@@ -6,8 +6,10 @@ var Impassable = require('./Impassable.js');
 var HealthWell = require('./HealthWell.js');
 
 var DIAMOND_MINE_CAPTURE_DAMAGE = 20;
-var HERO_ATTACK_DAMAGE = 30;
-var HEALTH_WELL_HEAL_AMOUNT = 40;
+var HERO_ATTACK_DAMAGE = 20;
+var HERO_FOCUSED_ATTACK_DAMAGE = 10;
+var HEALTH_WELL_HEAL_AMOUNT = 30;
+var HERO_HEAL_AMOUNT = 40;
 
 var Game = function(n) {
   this.board = new Board(n);
@@ -275,7 +277,7 @@ Game.prototype._handleHeroMove = function(hero, direction) {
     this.board.tiles[hero.distanceFromTop][hero.distanceFromLeft] = hero;
 
   // If tile is a diamond mine, the mine is captured, but the hero stays put
-  } else if (tile.type === "DiamondMine") {
+  } else if (tile.type === 'DiamondMine') {
     var diamondMine = tile;
 
     // Hero attempts to capture mine
@@ -284,7 +286,7 @@ Game.prototype._handleHeroMove = function(hero, direction) {
     // If capturing the mine takes the hero to 0 HP, he dies
     if (hero.dead) {
       this.heroDied(hero);
-      this.moveMessage += ', tried to capture a diamond mine, but died.';
+      this.moveMessage += ', tried to capture a diamond mine, but died';
       return;
 
     // If he survives, he is now the owner of the mine
@@ -293,9 +295,24 @@ Game.prototype._handleHeroMove = function(hero, direction) {
       diamondMine.owner = hero;
     }
   // Running into a health well will heal a certain amount of damage
-  } else if (tile.type === "HealthWell") {
+  } else if (tile.type === 'HealthWell') {
     this.moveMessage += ', drank from a health well, and now feels MUCH better';
     hero.healDamage(HEALTH_WELL_HEAL_AMOUNT);
+
+  // Running into another hero will either heal them (same team) or hurt them (opposing team)
+  } else if (tile.type === 'Hero') {
+    var otherHero = tile;
+
+    // Running directly into an enemy hero will deal extra damage
+    if (otherHero.team !== hero.team) {
+      this.moveMessage += ', and stabbed ' + otherHero.name + ' for extra damage';
+      hero.damageDone += otherHero.takeDamage(HERO_FOCUSED_ATTACK_DAMAGE);
+
+    // Running directly into a friendly hero will give the friendly hero health
+    } else {
+      this.moveMessage += ', and healed ' + otherHero.name;
+      hero.healthGiven += otherHero.healDamage(HERO_HEAL_AMOUNT);
+    }
   }
 };
 

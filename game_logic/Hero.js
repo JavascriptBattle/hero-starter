@@ -21,6 +21,7 @@ var Hero = function(distanceFromTop, distanceFromLeft, name, team) {
   this.lastActiveTurn = 0;
   this.gravesRobbed = 0;
   this.healthRecovered = 0;
+  this.healthGiven = 0;
 
   // Results
   this.won = false;
@@ -68,7 +69,11 @@ Hero.prototype.healDamage = function(amount) {
   }
 
   //Stores stats
-  this.healthRecovered += this.health - startingHealth;
+  var healthReceived = this.health - startingHealth;
+  this.healthRecovered += healthReceived;
+
+  //Returns the amount healed
+  return healthReceived;
 };
 
 // Take control of a diamond mine
