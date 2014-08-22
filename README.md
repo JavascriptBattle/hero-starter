@@ -7,7 +7,7 @@
 ---
 ##Play Now##
 
-If you are anxious to join the fight (and who wouldn't be), then all you need to do is fork this repo and let us know your username and repo name on sign-up. It really is that easy. We have a lot of shenanigans going on in the background to make this happen and we have tried to make this process as seamless as possible.
+If you are anxious to join the fight (and who wouldn't be), then all you need to do is fork this repo. It really is that easy. We have a lot of shenanigans going on in the background to make this happen and we have tried to make this process as seamless as possible.
 
 
 ####Steps To Play Now####
