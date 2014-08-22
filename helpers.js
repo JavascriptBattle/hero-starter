@@ -231,4 +231,19 @@ helpers.findNearestEnemy = function(gameData) {
   return pathInfoObject.direction;
 };
 
+// Returns the direction of the nearest friendly champion
+// (or returns false if there are no accessible friendly champions)
+helpers.findNearestTeamMember = function(gameData) {
+  var hero = gameData.activeHero;
+  var board = gameData.board;
+
+  //Get the path info object
+  var pathInfoObject = helpers.findNearestObjectDirectionAndDistance(board, hero, function(heroTile) {
+    return heroTile.type === 'Hero' && heroTile.team !== hero.team;
+  });
+
+  //Return the direction that needs to be taken to achieve the goal
+  return pathInfoObject.direction;
+};
+
 module.exports = helpers;
