@@ -239,7 +239,7 @@ helpers.findNearestTeamMember = function(gameData) {
 
   //Get the path info object
   var pathInfoObject = helpers.findNearestObjectDirectionAndDistance(board, hero, function(heroTile) {
-    return heroTile.type === 'Hero' && heroTile.team !== hero.team;
+    return heroTile.type === 'Hero' && heroTile.team === hero.team;
   });
 
   //Return the direction that needs to be taken to achieve the goal
