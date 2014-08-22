@@ -79,8 +79,8 @@
 //   }
 // };
 
-// // The "Safe Diamond Miner"
-// // This hero will attempt to capture enemy diamond mines.
+// The "Safe Diamond Miner"
+// This hero will attempt to capture enemy diamond mines.
 var move = function(gameData, helpers) {
   var myHero = gameData.activeHero;
 
