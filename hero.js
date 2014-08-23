@@ -137,16 +137,10 @@ var move = function(gameData, helpers) {
 };
 */
 
-<<<<<<< HEAD
-// The "Selfish Diamond Miner" (captures teammates' diamond mines)
-var move = function(gameData, helpers) {
-  var myHero = gameData.activeHero;
-=======
 // // The "Selfish Diamond Miner"
 // // This hero will attempt to capture diamond mines (even those owned by teammates).
-// var move = function(gameData, helpers) {
-//   var myHero = gameData.activeHero;
->>>>>>> feature(helpers, hero): Add "The Priest", add descriptions of starting "personalities"
+var move = function(gameData, helpers) {
+  var myHero = gameData.activeHero;
 
   //Get stats on the nearest health well
   var healthWellStats = helpers.findNearestObjectDirectionAndDistance(gameData.board, myHero, function(boardTile) {
