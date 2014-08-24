@@ -26,6 +26,36 @@
   Such is the power of Javascript!!!
 
 */
+
+/*
+// Aggressor
+var move = function(gameData, helpers) {
+  // Here, we ask if your hero's health is below 30
+  if (gameData.activeHero().health <= 30){
+    // If it is, head towards the nearest health well
+    return helpers.findNearestHealthWell(gameData);
+  } else {
+    // Otherwise, go attack someone...anyone.
+    return helpers.findNearestEnemy(gameData);
+  }
+};
+*/
+/*
+// Health Nut
+var move = function(gameData, helpers) {
+  // Here, we ask if your hero's health is below 75
+  if (gameData.activeHero().health <= 75){
+    // If it is, head towards the nearest health well
+    return helpers.findNearestHealthWell(gameData);
+  } else {
+    // Otherwise, go mine some diamonds!!!
+    return helpers.findNearestDiamondMine(gameData);
+  }
+};
+*/
+// Balanced
+/*
+=======
 //TL;DR: If you are new, just uncomment the 'move' function that you think sounds like fun!
 //       (and comment out all the other move functions)
 
@@ -78,7 +108,8 @@
 //   }
 // };
 
-// // The "Safe Diamond Miner"
+// The "Safe Diamond Miner"
+// This hero will attempt to capture enemy diamond mines.
 var move = function(gameData, helpers) {
   var myHero = gameData.activeHero;
 
@@ -103,33 +134,34 @@ var move = function(gameData, helpers) {
     return helpers.findNearestNonTeamDiamondMine(gameData);
   }
 };
+*/
 
 // // The "Selfish Diamond Miner"
 // // This hero will attempt to capture diamond mines (even those owned by teammates).
-// var move = function(gameData, helpers) {
-//   var myHero = gameData.activeHero;
+var move = function(gameData, helpers) {
+  var myHero = gameData.activeHero;
 
-//   //Get stats on the nearest health well
-//   var healthWellStats = helpers.findNearestObjectDirectionAndDistance(gameData.board, myHero, function(boardTile) {
-//     if (boardTile.type === 'HealthWell') {
-//       return true;
-//     }
-//   });
+  //Get stats on the nearest health well
+  var healthWellStats = helpers.findNearestObjectDirectionAndDistance(gameData.board, myHero, function(boardTile) {
+    if (boardTile.type === 'HealthWell') {
+      return true;
+    }
+  });
 
-//   var distanceToHealthWell = healthWellStats.distance;
-//   var directionToHealthWell = healthWellStats.direction;
+  var distanceToHealthWell = healthWellStats.distance;
+  var directionToHealthWell = healthWellStats.direction;
 
-//   if (myHero.health < 40) {
-//     //Heal no matter what if low health
-//     return directionToHealthWell;
-//   } else if (myHero.health < 100 && distanceToHealthWell === 1) {
-//     //Heal if you aren't full health and are close to a health well already
-//     return directionToHealthWell;
-//   } else {
-//     //If healthy, go capture a diamond mine!
-//     return helpers.findNearestUnownedDiamondMine(gameData);
-//   }
-// };
+  if (myHero.health < 40) {
+    //Heal no matter what if low health
+    return directionToHealthWell;
+  } else if (myHero.health < 100 && distanceToHealthWell === 1) {
+    //Heal if you aren't full health and are close to a health well already
+    return directionToHealthWell;
+  } else {
+    //If healthy, go capture a diamond mine!
+    return helpers.findNearestUnownedDiamondMine(gameData);
+  }
+};
 
 // // The "Coward"
 // // This hero will try really hard not to die.
