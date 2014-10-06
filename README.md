@@ -16,7 +16,7 @@ If you are anxious to join the fight (and who wouldn't be), then all you need to
   * After signing up, navigate back to this page and at the top right of your screen, click the 'Fork' button.
   * When you click the 'Fork' button, you will be asked where you want to fork this repo. Go ahead and click your username. This will effectively copy this repo into yours.
   * BAM!!! Now, you have a working repo in your account! Nice! 
-  * The only thing left to do is navigate to the [Javascript Battle](http://javascriptbattle.com/) website and sign up. Make sure you tell us the name of your repo. 
+  * The only thing left to do is navigate to the [Javascript Battle](http://javascriptbattle.com/) website and sign up. Make sure you tell us the name of your repo (we will assume it is called "hero-starter" unless you tell us differently on your user page).
     * **Hint** - You can find this info by looking at the url when you are in your repo. For example, the url for my repo is 'github.com/forrestbthomas/hero-starter'. My username is 'forrestbthomas' and my repo name is 'hero-starter'.
   * At this point, you have a working repo, with working hero code and you can watch your hero tilt with the best in tomorrow's battle. Once you are ready, you can begin diving in to the code, to make your hero even stronger and make Javascript Battle even more glorious!
 
@@ -25,6 +25,7 @@ If you are anxious to join the fight (and who wouldn't be), then all you need to
 1. Cloning, Adding and Committing
 2. The Hero's Brain
 3. Pushing and Waiting
+4. Testing your hero code
 
 ####Cloning, Adding and Committing####
 You already have a working hero. You have watched the epic-ness that is your champion battling against other noble heroes. However, there comes a time in every hero's journey, when training becomes necessary.
@@ -111,7 +112,7 @@ This allows our site to pull this code from your repo and use it in tomorrow's g
 Once you have changed your hero to be the ultimate Javascript champion, you will need to push your changes to GitHub.
 
 ######Steps######
-  * On the command line, navigate to your hero directory.
+  * On the command line, navigate to your hero code directory.
   * After adding and committing your changes, type in the following command:
 ```
 git push origin master
@@ -124,3 +125,31 @@ git push origin master
 [Stop by](http://javascriptbattle.com/#page-top) the site tomorrow and see how your hero did. We encourage you to continue to make changes to your hero repo as often as you like. We hope this experience will both be an enjoyable and instructive experience. 
 
 If we can make our site better in any way or make any instructions or code more explicit, please let us know. Until then, may the javascripts be with you!
+
+####Testing####
+
+We have a testing site coming soon.  For now, though, you can still test your hero code on your own!  There are two ways to do this:
+
+######Option 1: Make sure your code doesn't have errors######
+
+  * On the command line, navigate to your hero code directory.
+  * After making sure you have Node and NPM installed, type in the following commands:
+```
+npm install
+npm test
+```
+  * If both tests pass, your code doesn't have any obvious errors!
+
+######Option 2: Put your hero in a mini-battle######
+
+  * On the command line, navigate to your hero directory.
+  * After making sure you have Node installed, type in the following command:
+```
+node test_your_hero_code.js
+```
+  * This will run and print out the results of a "mini-game" of only 15 turns which takes place on a 5x5 game board against a single enemy hero.
+  * The command line will output what the board looks like at each turn, and will output the moves your hero tried to make each turn.
+  * Your hero will be denoted by the code "H00", the enemy hero will be denoted by the code "H01"
+  * Diamond mines will be denoted by "DXX" where the Xs are numbers
+  * Health wells will be denoted by "WWW"
+  * Remember, `test_your_hero_code.js` is there for you! Feel free to modify it however you like--we will only ever pull in and use your `hero.js` and `helpers.js` files in each daily battle.

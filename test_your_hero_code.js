@@ -72,6 +72,8 @@ for (var i=0; i<turnsToPlay; i++) {
   console.log('Turn ' + i + ':');
   console.log('-----');
   console.log(hero.name + ' tried to move ' + direction);
+  console.log(hero.name + ' owns ' + hero.mineCount + ' diamond mines')
+  console.log(hero.name + ' has ' + hero.health + ' health')
   game.handleHeroTurn(direction);
   game.board.inspect();
 }
