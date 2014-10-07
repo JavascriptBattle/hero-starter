@@ -26,9 +26,9 @@ Several things happen on each turn. Let's take a single turn from your hero as a
   4. If the tile your hero wants to move to is a diamond mine, then your hero will capture the diamond mine, but will not move on to that tile. Additionally, your hero will receive 20 damage because diamond mines are magic. 
   5. If the tile your hero wants to move to is a health well, then your hero will receive 30 health, but will not move on to that tile.
   6. If the tile your hero wants to move to is an enemy hero, then your hero will deal 10 damage to the enemy hero, but will not move on to that tile.
-  7. If the tile your hero wants to move to is a friendly hero, then your hero will receive 40 health, but will not move on to that tile.
+  7. If the tile your hero wants to move to is a friendly hero, then the friendly hero will receive 40 health, but your hero will not move on to that tile.
 4. If your hero dies after moving, then we update the hero's status to 'dead' and dig a grave where the hero once was.
-5. If your hero is still alive after moving, then your hero deals 20 damage to any hero on an adjacent tile. This is in addition to the specific damage done by your hero earlier in the turn.
+5. If your hero is still alive after moving, then your hero deals 20 damage to any enemy hero on an adjacent tile. This is in addition to the specific damage done by your hero earlier in the turn.
 6. After this, your hero's turn is over and we increment the game's turn and move on to the next hero. 
 
 ###Statistics###
