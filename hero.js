@@ -17,7 +17,7 @@
     - a "helpers" object, which contains useful helper functions
       - check out the helpers.js file to see what is available to you
 
-    (the details of these objects can be found on javascriptbattle.com/rules)
+    (the details of these objects can be found on javascriptbattle.com/#rules)
 
   This file contains four example heroes that you can use as is, adapt, or
   take ideas from and implement your own version. Simply uncomment your desired
