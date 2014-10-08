@@ -82,7 +82,7 @@ This will bring up a prompt in your terminal for you to write a message. This me
 ####The Hero's Brain####
 Inside of hero.js is some Javascript code. If you have never taken a look at Javascript before, we would recommend going through some online resources to get acclimated.
   * [Codecademy](http://www.codecademy.com/)
-  * [Khan Acamdey](https://www.khanacademy.org/)
+  * [Khan Academy](https://www.khanacademy.org/)
   * [Coderbyte](http://www.coderbyte.com/)
   * [Code School](https://www.codeschool.com/)
   * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
