@@ -128,7 +128,9 @@ If we can make our site better in any way or make any instructions or code more 
 
 ####Testing####
 
-We have a testing site coming soon.  For now, though, you can still test your hero code on your own!  There are two ways to do this:
+We have a user-friendly testing site where you can upload your hero.js file and see immediate results in a simulated game.  Check it out [here](http://codetester.javascriptbattle.com/).
+
+Additionally, you can still test your hero code on your own!  There are two ways to do this:
 
 ######Option 1: Make sure your code doesn't have errors######
 
