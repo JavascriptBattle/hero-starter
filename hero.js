@@ -72,7 +72,7 @@
    var myHero = gameData.activeHero;
    if (myHero.health < 60) {
      return helpers.findNearestHealthWell(gameData);
-   } else if (myHero.health>90 {
+   } else if (myHero.health>90) {
      return helpers.findNearestWeakerEnemy(gamedata); /*prioritize uncapped enemy mines later?*/
    } else {
 	return helpers.findNearestTeamMember(gamedata);
