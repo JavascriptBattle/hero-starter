@@ -152,4 +152,4 @@ node test_your_hero_code.js
   * Your hero will be denoted by the code "H00", the enemy hero will be denoted by the code "H01"
   * Diamond mines will be denoted by "DXX" where the Xs are numbers
   * Health wells will be denoted by "WWW"
-  * Remember, `test_your_hero_code.js` is there for you! Feel free to modify it however you like--we will only ever pull in and use your `hero.js` and `helpers.js` files in each daily battle.
+  * Remember, `test_your_hero_code.js` is there for you! Feel free to modify it however you like--we will only ever pull in and use your `hero.js` and `helpers.js` files in each daily battle. Test?
