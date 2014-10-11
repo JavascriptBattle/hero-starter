@@ -107,11 +107,11 @@ module.exports = helpers;
 ```
 This allows our site to pull this code from your repo and use it in tomorrow's game.
 
-####Pushing####
+####Pushing and Pulling####
 
+######Pushing######
 Once you have changed your hero to be the ultimate Javascript champion, you will need to push your changes to GitHub.
 
-######Steps######
   * On the command line, navigate to your hero code directory.
   * After adding and committing your changes, type in the following command:
 ```
@@ -122,7 +122,12 @@ git push origin master
   * After that, navigate to your GitHub repo in your favorite browser and check out your altered files.
   * That's it! You have successfully altered your hero.js file and prepared your hero for tomorrow's battle. Now, we will wait and see how your hero does against other noble warriors in tomorrow's battle.
 
-[Stop by](http://javascriptbattle.com/#page-top) the site tomorrow and see how your hero did. We encourage you to continue to make changes to your hero repo as often as you like. We hope this experience will both be an enjoyable and instructive experience. 
+[Stop by](http://javascriptbattle.com/#page-top) the site tomorrow and see how your hero did. We encourage you to continue to make changes to your hero repo as often as you like. We hope this experience will both be an enjoyable and instructive experience.
+
+######Pulling######
+
+Additionally, every so often, we may update the Hero-Starter repo. We will do this in such a way that your current Hero-Starter repo should be supported. However, if you would like to keep your repo up to date with ours (and all of the cool new features that come with it) be sure to pull down those changes. To do so, here are the steps you will need to take:
+
 
 If we can make our site better in any way or make any instructions or code more explicit, please let us know. Until then, may the javascripts be with you!
 
