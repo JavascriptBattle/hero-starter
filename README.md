@@ -128,8 +128,20 @@ git push origin master
 
 Additionally, every so often, we may update the Hero-Starter repo. We will do this in such a way that your current Hero-Starter repo should be supported. However, if you would like to keep your repo up to date with ours (and all of the cool new features that come with it) be sure to pull down those changes. To do so, here are the steps you will need to take:
 
+  * First, you will need to add the original Hero-Starter repo as a remote repository. Navigate to the directory that your repo is stored in and type the following in the command line:
+  ```sh
+  git remote add upstream https://github.com/JavascriptBattle/hero-starter.git
+  ```
+  This tells Git to add a remote to your repo (technically, your 'origin' is a remote that is added by default, so you have already done this and didn't even know it). 'Upstream' is a common name given to remotes that we want to pull changes from and the URL is the location of that repository. 
+  * Now that the original Hero-Starter repo is linked to your repo as a remote, you can pull down any changes that may have been made to it. To do this, type the following in the command line:
+  ```sh
+  git pull --rebase upstream master
+  ```
+  This tells Git to fetch any changes in the upstream repository, on the master branch and merge them into whatever branch you are currently on. The 'rebase' flag tells Git to put the commit history in an order such that any changes you have made will be put on top. (This is just in case you want to contribute to the repository).
 
-If we can make our site better in any way or make any instructions or code more explicit, please let us know. Until then, may the javascripts be with you!
+There you have it! Now you have the new Hero-Starter repo and all of the cool new features that come along with it. This does not need to be a frequent exercise (once a week or so would keep you safe), though there is no harm in doing it often.
+
+Thanks so much for playing Javascript Battle! If we can make our site better in any way or make any instructions or code more explicit, please let us know. Until then, may the javascripts be with you!
 
 ####Testing####
 
