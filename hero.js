@@ -55,7 +55,6 @@ var move = function(gameData, helpers) {
 */
 // Balanced
 
-=======
 //TL;DR: If you are new, just uncomment the 'move' function that you think sounds like fun!
 //       (and comment out all the other move functions)
 
