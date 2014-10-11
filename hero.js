@@ -54,7 +54,7 @@ var move = function(gameData, helpers) {
 };
 */
 // Balanced
-/*
+
 =======
 //TL;DR: If you are new, just uncomment the 'move' function that you think sounds like fun!
 //       (and comment out all the other move functions)
@@ -134,34 +134,34 @@ var move = function(gameData, helpers) {
     return helpers.findNearestNonTeamDiamondMine(gameData);
   }
 };
-*/
+
 
 // // The "Selfish Diamond Miner"
 // // This hero will attempt to capture diamond mines (even those owned by teammates).
-var move = function(gameData, helpers) {
-  var myHero = gameData.activeHero;
+// var move = function(gameData, helpers) {
+  // var myHero = gameData.activeHero;
 
   //Get stats on the nearest health well
-  var healthWellStats = helpers.findNearestObjectDirectionAndDistance(gameData.board, myHero, function(boardTile) {
-    if (boardTile.type === 'HealthWell') {
-      return true;
-    }
-  });
+  // var healthWellStats = helpers.findNearestObjectDirectionAndDistance(gameData.board, myHero, function(boardTile) {
+    // if (boardTile.type === 'HealthWell') {
+      // return true;
+    // }
+  // });
 
-  var distanceToHealthWell = healthWellStats.distance;
-  var directionToHealthWell = healthWellStats.direction;
+  // var distanceToHealthWell = healthWellStats.distance;
+  // var directionToHealthWell = healthWellStats.direction;
 
-  if (myHero.health < 40) {
+  // if (myHero.health < 40) {
     //Heal no matter what if low health
-    return directionToHealthWell;
-  } else if (myHero.health < 100 && distanceToHealthWell === 1) {
+    // return directionToHealthWell;
+  // } else if (myHero.health < 100 && distanceToHealthWell === 1) {
     //Heal if you aren't full health and are close to a health well already
-    return directionToHealthWell;
-  } else {
+    // return directionToHealthWell;
+  // } else {
     //If healthy, go capture a diamond mine!
-    return helpers.findNearestUnownedDiamondMine(gameData);
-  }
-};
+    // return helpers.findNearestUnownedDiamondMine(gameData);
+  // }
+// };
 
 // // The "Coward"
 // // This hero will try really hard not to die.
