@@ -224,7 +224,7 @@ helpers.findNearestEnemy = function(gameData) {
 
   //Get the path info object
   var pathInfoObject = helpers.findNearestObjectDirectionAndDistance(board, hero, function(enemyTile) {
-    return enemyTile.type === 'Hero' && enemyTile.team !== hero.team
+    return enemyTile.type === 'Hero' && enemyTile.team !== hero.team;
   });
 
   //Return the direction that needs to be taken to achieve the goal
