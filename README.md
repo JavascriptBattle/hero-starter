@@ -24,7 +24,7 @@ If you are anxious to join the fight (and who wouldn't be), then all you need to
 
 1. Cloning, Adding and Committing
 2. The Hero's Brain
-3. Pushing and Waiting
+3. Pushing and Pulling
 4. Testing your hero code
 
 ####Cloning, Adding and Committing####
