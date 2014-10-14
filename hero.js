@@ -105,7 +105,7 @@ var move = function(gameData, helpers) {
 };
 */
 
-/*
+
 // The "Careful Assassin"
 // This hero will attempt to kill the closest weaker enemy hero.
 var move = function(gameData, helpers) {
@@ -116,7 +116,7 @@ var move = function(gameData, helpers) {
     return helpers.findNearestWeakerEnemy(gameData);
   }
 };
-*/
+
 
 
 // The "Safe Diamond Miner"
