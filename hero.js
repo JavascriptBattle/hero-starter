@@ -20,15 +20,16 @@ var moves = {
     well = helpers.findNearestHealthWell(gameData);
     mine = helpers.findNearestNonTeamDiamondMine(gameData);
 
+    if (weak && weak.distance == 1) return weak.direction;
     if (well && well.distance==1 && stro && stro.distance==1) return well.direction;
-    if (weak && weak.distance <= 2) return weak.direction;
-    if (hero.health < 90 && well) return well.direction;
+    if (weak && weak.distance <= 3) return weak.direction;
+    if (hero.health <= 20 && well) return well.direction;
     if (mine && mine.distance <= 2 && hero.health > 50) return mine.direction;
     if (mine && hero.health > 80) return mine.direction;
     return ( (well || weak || mine || ally || stro).direction );
   }
 };
 
-var move = moves.healthNutCoward;
+var move = moves.sm1;
 
 module.exports = move;
