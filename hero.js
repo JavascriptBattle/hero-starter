@@ -1,7 +1,7 @@
 var moves = {
-  healthNut:  function(gameData, helpers) {
+  healthNutCoward:  function(gameData, helpers) {
     // Here, we ask if your hero's health is below 75
-    if (gameData.activeHero.health <= 75){
+    if (gameData.activeHero.health <= 100){
       // If it is, head towards the nearest health well
       return helpers.findNearestHealthWell(gameData);
     } else {
@@ -29,6 +29,6 @@ var moves = {
   }
 };
 
-var move = moves.sm1;
+var move = moves.healthNutCoward;
 
 module.exports = move;
