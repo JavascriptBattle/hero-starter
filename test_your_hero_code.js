@@ -45,7 +45,7 @@ game.addDiamondMine(2,3);
 //Add your hero in the top left corner of the map (team 0)
 game.addHero(0, 0, 'MyHero', 0);
 
-//Add an enemy hero in the bottom left corner of the map (team 1)
+//Add an enemy hero in the bottom right corner of the map (team 1)
 game.addHero(4, 4, 'Enemy', 1);
 
 console.log('About to start the game!  Here is what the board looks like:');
