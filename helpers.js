@@ -246,4 +246,38 @@ helpers.findNearestTeamMember = function(gameData) {
   return pathInfoObject.direction;
 };
 
+helpers.getDirectionsFromTile = function(gameData, tile) {
+	var hero = gameData.activeHero;
+	if (hero.distanceFromLeft === tile.distanceFromLeft
+		&& hero.distanceFromTop == tile.distanceFromTop) {
+		return ['Stay'];
+	}
+	var result = [];
+	if (hero.distanceFromLeft < tile.distanceFromLeft) {
+		result.push('East');
+	}
+	if (hero.distanceFromLeft > tile.distanceFromLeft) {
+		result.push('West');
+	}
+	if (hero.distanceFromTop < tile.distanceFromTop) {
+		result.push('South');
+	}
+	if (hero.distanceFromTop > tile.distanceFromTop) {
+		result.push('North');
+	}
+	return result;
+};
+
+helpers.validDirection = function(gameData, direction) {
+	var myHero = gameData.activeHero;
+	var tile = helpers.getTileNearby(gameData.board, myHero.distanceFromTop, myHero.distanceFromLeft, direction);
+	if (tile) {
+		if (tile.type === 'DiamondMine' && tile.owner === myHero) {
+			return false;
+		}
+		return true;
+	}
+	return false;
+};
+
 module.exports = helpers;
