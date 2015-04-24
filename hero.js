@@ -176,11 +176,75 @@ var moves = {
   // This hero will try really hard not to die.
   coward : function(gameData, helpers) {
     return helpers.findNearestHealthWell(gameData);
+  },
+
+  'harbringer-of-bananas': function(gameData, helpers) {
+	  var myHero = gameData.activeHero;
+		var directions = ['North', 'South', 'East', 'West', 'Stay'],
+			rating = {};
+		for (var i = 0; i < directions.length; i++) {
+			rating[directions[i]] = 0;
+		}
+	  helpers.findNearestObjectDirectionAndDistance(gameData.board, myHero, function(boardTile) {
+	    if (boardTile.type == 'Unoccupied') {
+				return;
+	    }
+	    var dir = helpers.getDirectionsFromTile(gameData, boardTile);
+	    var r = 0;
+	    if (boardTile.type == 'DiamondMine' && myHero.health >= 50) {
+	      if (boardTile.owner === undefined) {
+	        r = 5;
+	      } else if (boardTile.owner.team !== myHero.team) {
+		      r = 7;
+	      }
+	    }
+	    if (boardTile.type === 'HealthWell') {
+	      if ( myHero.health <= 10) {
+		      r = 50;
+	      } else if (myHero.health <= 40) {
+		      r = 20;
+	      } else if (myHero.health <= 70) {
+          r = 10;
+        }
+	    }
+	    if (boardTile.type === 'Hero') {
+				if (boardTile.team !== myHero.team) {
+					if (myHero.health >= 60) {
+						r=10;
+					} else {
+						r=-2;
+					}
+				} else {
+					if (boardTile.health < 50) {
+						r=6;
+					}
+				}
+	    }
+
+		  for (var i = 0; i < dir.length; i++) {
+				rating[dir[i]]+= r;
+				//console.log('Rating '+dir[i]+' at '+r);
+			}
+	  });
+	  var result = [directions[0]];
+		var max = rating[directions[0]];
+
+	  for (var i = 1; i < directions.length; i++) {
+			if (rating[directions[i]] > max) {
+				max = rating[directions[i]];
+				result = [directions[i]];
+			}
+		  if (rating[directions[i]] == max) {
+				result.push(directions[i]);
+			}
+		}
+		//console.log(myHero);
+		return result[Math.floor(Math.random() * result.length)];
   }
  };
 
 //  Set our heros strategy
-var  move =  moves.aggressor;
+var  move =  moves['harbringer-of-bananas'];
 
 // Export the move function here
 module.exports = move;
