@@ -1,14 +1,14 @@
 
 ![](https://raw.githubusercontent.com/JavascriptBattle/javascript-battle-website/master/public/img/black-knight.png)
 
-#Javascript Battle - Hero Starter Repo#
+# Javascript Battle - Hero Starter Repo #
 
 ---
-##Rules##
+## Rules ##
 
 If you want to update your hero, you will benefit from knowing a little more about the rules of the game. Below, you will find detailed descriptions of the different aspects of the game logic.
 
-###Win Conditions###
+### Win Conditions ###
 
 The game is decided in one of two ways:
   1. A team eliminates all of the other team's heroes or...
@@ -16,7 +16,7 @@ The game is decided in one of two ways:
 
 Your hero has the potential to behave in any way you program it, either by re-writing the code yourself or simply by replacing your hero type with another pre-defined hero type. Every change you make could alter the outcome of the game. If you program your hero to be a Selfish Diamond Miner, for example, then you will likely rank high in the diamond mines captured category, but will not be helping your team, possibly causing a loss in your stats. The win conditions are important to keep in mind as you think about how you want to program your hero.
 
-###Turns###
+### Turns ###
 
 Several things happen on each turn. Let's take a single turn from your hero as an example, and walk through the steps.
 
@@ -34,7 +34,7 @@ Several things happen on each turn. Let's take a single turn from your hero as a
 5. If your hero is still alive after moving, then your hero deals 20 damage to any enemy hero on an adjacent tile. This is in addition to the specific damage done by your hero earlier in the turn.
 6. After this, your hero's turn is over and we increment the game's turn and move on to the next hero.
 
-###Statistics###
+### Statistics ###
 
 After a win condition has been met, we keep track of a number of statistics. Your hero will have the following statistics added to his or her total in our database:
 
